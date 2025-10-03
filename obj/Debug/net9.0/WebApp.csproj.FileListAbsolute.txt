@@ -414,3 +414,8 @@ C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\refint\WebApp.dll
 C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\WebApp.pdb
 C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\WebApp.genruntimeconfig.cache
 C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\ref\WebApp.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\WebApp.sourcelink.json
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll

@@ -11,6 +11,8 @@ namespace WebApp.Models
 
         public IEnumerable<Product>? Products { get; set; }
 
+
+
     }
 
 }
