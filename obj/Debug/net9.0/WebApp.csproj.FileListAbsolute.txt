@@ -419,3 +419,8 @@ C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPat
 C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Newtonsoft.Json.dll
 C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Microsoft.OpenApi.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Lenovo\Desktop\ASP\WebApp\obj\Debug\net9.0\WebApp.MvcApplicationPartsAssemblyInfo.cs

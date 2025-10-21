@@ -6,6 +6,7 @@ namespace WebApp.Models
         public string Name { get; set; } = string.Empty;
         public string City { get; set; } = string.Empty;
 
+        // Navigation property
         public IEnumerable<Product>? Products { get; set; }
 
 

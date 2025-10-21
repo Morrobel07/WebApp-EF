@@ -12,9 +12,11 @@ namespace WebApp.Models
         public long CategoryId { get; set; }
         public Category? Category { get; set; }
 
+        // Foreign key
         public long SupplierId { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+
         public Supplier? Supplier { get; set; }
 
 
