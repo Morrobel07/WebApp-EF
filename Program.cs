@@ -1,13 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.RegularExpressions;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.OpenApi.Models;
 //using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// builder.Services.AddEndpointsApiExplorer();
+// builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(options =>
 {
@@ -18,16 +21,35 @@ builder.Services.AddDbContext<DataContext>(options =>
 
 });
 
-builder.Services.AddControllers().AddNewtonsoftJson();
+//swagger
+// builder.Services.AddSwaggerGen(c =>
+// {
+//     c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApp", Version = "v1" });
+// });
 
-builder.Services.Configure<MvcNewtonsoftJsonOptions>(options =>
-{
-    options.SerializerSettings.NullValueHandling
-    = Newtonsoft.Json.NullValueHandling.Ignore;
-});
+// icluding xml format
+// builder.Services.AddControllers()
+//     .AddNewtonsoftJson().AddXmlDataContractSerializerFormatters();
+
+// builder.Services.AddControllers().AddNewtonsoftJson();
+
+// builder.Services.Configure<MvcNewtonsoftJsonOptions>(options =>
+// {
+//     options.SerializerSettings.NullValueHandling
+//     = Newtonsoft.Json.NullValueHandling.Ignore;
+// });
 
 
-builder.Services.AddControllers();
+// tell mvc to accept any format send by the header
+// builder.Services.Configure<MvcOptions>(opts =>
+// {
+//     opts.RespectBrowserAcceptHeader = true;
+//     opts.ReturnHttpNotAcceptable = true;
+// });
+
+
+//  builder.Services.AddControllers();
+builder.Services.AddControllersWithViews();
 
 // builder.Services.Configure<JsonOptions>(opts =>
 // {
@@ -35,24 +57,37 @@ builder.Services.AddControllers();
 //     = JsonIgnoreCondition.WhenWritingNull;
 // });
 
-builder.Services.AddCors();
+// builder.Services.AddCors();
+
 
 
 var app = builder.Build();
 
+app.UseStaticFiles();
 app.MapControllers();
-
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.MapControllerRoute("Default",
+"{controller = Home}/{action=Index}/{id?}");
 
 
+// if (app.Environment.IsDevelopment())
+// {
+//     app.UseSwagger();
+//     app.UseSwaggerUI();
+// }
 
-app.UseMiddleware<WebApp.TestMiddleware>();
+// app.UseSwagger();
 
-app.MapGet("/", () => "Hello World!");
+// app.UseSwaggerUI(opts =>
+// {
+//     opts.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApp");
+// });
+
+
+
+
+// app.UseMiddleware<WebApp.TestMiddleware>();
+
+// app.MapGet("/", () => "Hello World!");
 
 
 
